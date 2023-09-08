@@ -1,4 +1,4 @@
-const rect = document.querySelector("div");
+const rect = document.querySelector(".cursor-default");
 
 document.addEventListener("mousemove", function (e) {
   const height = rect.offsetHeight;
@@ -7,6 +7,8 @@ document.addEventListener("mousemove", function (e) {
   const posX = e.pageX - width / 2;
   const posY = e.pageY - height / 2;
 
-  rect.style.left = posX + "px";
-  rect.style.top = posY + "px";
+  setTimeout(() => {
+    rect.style.left = posX + "px";
+    rect.style.top = posY + "px";
+  }, 20);
 });
